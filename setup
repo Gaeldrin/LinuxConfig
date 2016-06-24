@@ -1,11 +1,18 @@
 #!/bin/bash
 
-cd ~/ServerConfig
-aptitude install git
-aptitude install zsh
-zsh
+git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
+
+# Use Prezto
 setopt EXTENDED_GLOB
 for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
-ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
+  ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
 done
+
 chsh -s /bin/zsh
+
+# Link / copy my conf files
+rm -f ~/.zshrc
+ln -s "${ZDOTDIR:-$HOME}"/ServerConfig/.zshrc ~/.zshrc 
+ln -s "${ZDOTDIR:-$HOME}"/ServerConfig/.vimrc ~/.vimrc 
+cp ~/ServerConfig/.dircolors ~/.dircolors
+
