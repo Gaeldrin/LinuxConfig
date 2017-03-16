@@ -1,21 +1,23 @@
-# My Server Config files
+# My Linux Config files
 
-It sucks to try to remember all the various things you need to do to a server when you set one up.
+Configuration of the terminal environment on new Linux installation made easy.
 
-This project takes my primary configs for zsh and vim, and places them into a GitHub repository that can be downloaded from new boxes.
+This project takes my primary configs for zsh and vim, and places them into a GitHub repository that can be downloaded from new boxes. Also contains setup script to do proper adjustments and download up-to-date versions of all necessary modules (Prezto, Solarized theme).
 
 ## Installation
 
-1. Install git & zsh
+1. Install vim, git & zsh
 
-        apt-get install git zsh
+        apt-get install vim git zsh
 
 2. Clone down the repository on the new box
 
-        git clone https://github.com/Gaeldrin/ServerConfig.git
+        git clone https://github.com/Gaeldrin/LinuxConfig.git
 
 3. Run zsh and run the setup script
 
-4. Log out and back in
+4. (**Optional, recommended**) Install the [Solarized](https://github.com/altercation/solarized) colour theme for the terminal emulator of your choice
 
-You should now have your (my) preferred configuration for zsh and vim. For me this includes lots of vim configurations, such as alternate ESC functionality, and vim control in the zsh shell.
+5. Log out and back in
+
+You should now have your (my) preferred configuration for zsh and vim. This includes lots of vim configurations, Solarized colour scheme for both vim and zsh, and vim-like control in the zsh shell.
