@@ -22,6 +22,9 @@ eval `dircolors ~/.dircolors`
 bindkey -v
 bindkey -M viins 'jk' vi-cmd-mode
 
+bindkey -M vicmd 'k' history-substring-search-up
+bindkey -M vicmd 'j' history-substring-search-down
+
 # Aliases
 
 #alias bt="wget http://cachefly.cachefly.net/400mb.test > /dev/null"
@@ -44,4 +47,6 @@ alias ehs="vim ~/.vim/bundle/snippets/snippets/html.snippets"
 alias filetree="ls -R | grep ":$" | sed -e 's/:$//' -e 's/[^-][^\/]*\//--/g' -e 's/^/ /' -e 's/-/|/'"
 #alias rm="rm -f"
 alias ds="du -hs * | sort -h"
+
+alias -g gp='| grep -i'
 

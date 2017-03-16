@@ -9,6 +9,12 @@ execute pathogen#infect()
 filetype plugin indent on
 syntax on
 
+" Basics
+
+inoremap jk <ESC>
+let mapleader = "\<Space>"
+
+
 set shell=/bin/zsh
 set guifont=Menlo:h14
 set nocompatible
@@ -48,8 +54,13 @@ set wrap
 set linebreak
 set nolist
 set formatoptions=qrn1
-set spell spelllang=en_us
 set colorcolumn=80
+
+" Spelling
+
+set spell spelllang=en_us
+nnoremap <leader>f 1z=
+nnoremap <leader>s :set spell!
 
 " Aesthetics
 
@@ -57,9 +68,17 @@ colorscheme solarized
 set background=light
 
 " Mappings and shortcuts
+" Copy & paste to system clipboard
 
-" Basics
+vmap <Leader>y "+y
+vmap <Leader>d "+d
+nmap <Leader>p "+p
+nmap <Leader>P "+P
+vmap <Leader>p "+p
+vmap <Leader>P "+P
 
-inoremap jk <ESC>
-let mapleader = "\<Space>"
+" Save file
+
+nnoremap <Leader>w :w<CR>
+
 

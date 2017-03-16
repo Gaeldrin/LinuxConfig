@@ -1,18 +1,24 @@
 #!/bin/bash
 
+# Get & use Prezto
 git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
 
-# Use Prezto
 setopt EXTENDED_GLOB
 for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
   ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
 done
 
+# Change default shell to zsh
 chsh -s /bin/zsh
 
-# Link / copy my conf files
-rm -f ~/.zshrc
+# Link my config files
+rm -f ~/.zshrc ~/.zpreztorc
 ln -s "${ZDOTDIR:-$HOME}"/ServerConfig/.zshrc ~/.zshrc 
 ln -s "${ZDOTDIR:-$HOME}"/ServerConfig/.vimrc ~/.vimrc 
-cp ~/ServerConfig/.dircolors ~/.dircolors
+ln -s "${ZDOTDIR:-$HOME}"/ServerConfig/.zpreztorc ~/.zpreztorc
+ln -s "${ZDOTDIR:-$HOME}"/ServerConfig/.dircolors ~/.dircolors
+
+# Get current Solarized scheme
+git clone git://github.com/altercation/vim-colors-solarized.git
+mv vim-colors-solarized ~/.vim/bundle/
 
