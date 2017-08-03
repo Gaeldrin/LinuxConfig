@@ -1,7 +1,11 @@
 
 #######################################################
-# Daniel Miessler's zsh configuration -- edited
+# Gaeldrin's zsh configuration
 #######################################################
+
+# Update path properly (when necessary)
+
+source /etc/profile.d/myenvvars.sh
 
 # Editor
 
@@ -50,3 +54,6 @@ alias ds="du -hs * | sort -h"
 
 alias -g gp='| grep -i'
 
+alias update="sudo apt update; sudo apt upgrade -y; sudo checkrestart"
+
+alias wildfly="sudo service wildfly"
