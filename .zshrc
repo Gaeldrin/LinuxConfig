@@ -31,7 +31,6 @@ bindkey -M vicmd 'j' history-substring-search-down
 
 # Aliases
 
-#alias bt="wget http://cachefly.cachefly.net/400mb.test > /dev/null"
 alias zconf="vi ~/.zshrc"
 alias zsource="source ~/.zshrc"
 alias zhup="source ~/.zshrc"
@@ -40,10 +39,8 @@ alias vconf="vim ~/.vimrc"
 alias v="cd ~/.vim"
 alias b="cd ~/.vim/bundle"
 alias nc="ncat"
-#alias traceroute="/usr/local/sbin/mtr"
 alias traceroute="mtr -rw"
 #alias fd="dscacheutil -flushcache"
-#alias ds="dd if=/dev/zero of=/tmp/output.img bs=8k count=256k"
 alias vi="/usr/bin/vim"
 alias vim="/usr/bin/vim"
 alias ems="vim ~/.vim/bundle/snippets/snippets/markdown.snippets"
@@ -57,3 +54,5 @@ alias -g gp='| grep -i'
 alias update="sudo apt update; sudo apt upgrade -y; sudo checkrestart"
 
 alias wildfly="sudo service wildfly"
+
+alias motd="run-parts /etc/update-motd.d/"
