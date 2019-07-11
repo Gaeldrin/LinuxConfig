@@ -53,6 +53,6 @@ alias -g gp='| grep -i'
 
 alias update="sudo apt update; sudo apt upgrade; sudo checkrestart"
 
-alias wildfly="sudo service wildfly"
-
 alias motd="run-parts /etc/update-motd.d/"
+
+tmux attach

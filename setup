@@ -13,12 +13,12 @@ chsh -s /bin/zsh
 
 # Link my config files
 rm -f ~/.zshrc ~/.zpreztorc
-ln -s "${ZDOTDIR:-$HOME}"/LinuxConfig/.zshrc ~/.zshrc 
-ln -s "${ZDOTDIR:-$HOME}"/LinuxConfig/.vimrc ~/.vimrc 
+ln -s "${ZDOTDIR:-$HOME}"/LinuxConfig/.zshrc ~/.zshrc
 ln -s "${ZDOTDIR:-$HOME}"/LinuxConfig/.zpreztorc ~/.zpreztorc
 ln -s "${ZDOTDIR:-$HOME}"/LinuxConfig/.dircolors ~/.dircolors
-# Also link the VIM folder
 ln -s "${ZDOTDIR:-$HOME}"/LinuxConfig/.vim ~/.vim
+ln -s "${ZDOTDIR:-$HOME}"/LinuxConfig/.vimrc ~/.vimrc
+ln -s "${ZDOTDIR:-$HOME}"/LinuxConfig/.tmux.conf ~/.tmux.conf
 
 # Get current Solarized scheme
 git clone git://github.com/altercation/vim-colors-solarized.git

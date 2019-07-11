@@ -6,9 +6,9 @@ This project takes my primary configs for zsh and vim, and places them into a Gi
 
 ## Installation
 
-1. Install vim, git & zsh
+1. Install git, tmux, vim & zsh
 
-        apt-get install vim git zsh
+        apt install git tmux vim zsh
 
 2. Clone down the repository on the new box
 
