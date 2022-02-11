@@ -10,6 +10,7 @@
 # Editor
 
 export EDITOR="/usr/bin/vim"
+export VISUAL=$EDITOR
 
 # Source Prezto
 
