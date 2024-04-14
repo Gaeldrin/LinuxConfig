@@ -11,16 +11,23 @@ done
 # Change default shell to zsh
 chsh -s /bin/zsh
 
+# Install up-to-date neovim (alternative would be Linux package from Github releases)
+curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage --output-dir ~
+chmod u+x ~/nvim.appimage
+
+# Install tmux plugin manager
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
 # Link my config files
 rm -f ~/.zshrc ~/.zpreztorc
 ln -s "${ZDOTDIR:-$HOME}"/LinuxConfig/.zshrc ~/.zshrc
 ln -s "${ZDOTDIR:-$HOME}"/LinuxConfig/.zpreztorc ~/.zpreztorc
-ln -s "${ZDOTDIR:-$HOME}"/LinuxConfig/.dircolors ~/.dircolors
-ln -s "${ZDOTDIR:-$HOME}"/LinuxConfig/.vim ~/.vim
-ln -s "${ZDOTDIR:-$HOME}"/LinuxConfig/.vimrc ~/.vimrc
-ln -s "${ZDOTDIR:-$HOME}"/LinuxConfig/.tmux.conf ~/.tmux.conf
+mkdir -p ~/.config/tmux/
+ln -s "${ZDOTDIR:-$HOME}"/LinuxConfig/tmux.conf ~/.config/tmux/tmux.conf
+ln -s "${ZDOTDIR:-$HOME}"/LinuxConfig/nvim ~/.config/nvim
 
-# Get current Solarized scheme
-git clone git://github.com/altercation/vim-colors-solarized.git
-mv vim-colors-solarized ~/.vim/bundle/
+# Remind to install the plugins
+echo "Launch tmux and install downloaded plugins using combination '<Ctrl+Space> I'."
+echo
+echo "Launch nvim and run :MasonInstallAll command after lazy.nvim finishes downloading plugins."
 
