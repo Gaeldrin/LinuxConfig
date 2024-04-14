@@ -30,7 +30,7 @@ alias zsource="source ~/.zshrc"
 alias zhup="source ~/.zshrc"
 alias nc="ncat"
 alias traceroute="mtr -rw"
-alias vim="~/nvim.appimage"
+alias vim=$EDITOR
 alias filetree="ls -R | grep ":$" | sed -e 's/:$//' -e 's/[^-][^\/]*\//--/g' -e 's/^/ /' -e 's/-/|/'"
 alias ds="du -hs * | sort -h"
 

@@ -12,6 +12,10 @@ done
 chsh -s /bin/zsh
 
 # Install up-to-date neovim (alternative would be Linux package from Github releases)
+#
+# On systems without FUSE (virtual machines etc.), it is possible to extract the appimage
+# to a location of your choosing and editing the EDITOR variable in .zshrc, e.g.:
+#   export EDITOR="~/LinuxConfig/squashfs-root/AppRun"
 curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage --output-dir ~
 chmod u+x ~/nvim.appimage
 
