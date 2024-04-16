@@ -25,12 +25,13 @@ bindkey -M vicmd 'k' history-substring-search-up
 bindkey -M vicmd 'j' history-substring-search-down
 
 # Aliases
+alias nvim=$EDITOR
+alias vim="nvim"
 alias zconf="vim ~/.zshrc"
 alias zsource="source ~/.zshrc"
 alias zhup="source ~/.zshrc"
 alias nc="ncat"
 alias traceroute="mtr -rw"
-alias vim=$EDITOR
 alias filetree="ls -R | grep ":$" | sed -e 's/:$//' -e 's/[^-][^\/]*\//--/g' -e 's/^/ /' -e 's/-/|/'"
 alias ds="du -hs * | sort -h"
 
