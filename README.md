@@ -10,7 +10,7 @@ This new version was heavily inspired by a great video from Dreams of Code (http
 
 1. Install git, tmux & zsh
 
-        apt install git tmux zsh
+        apt install git tmux zsh htop debian-goodies
 
 2. Clone the repository on the new box
 

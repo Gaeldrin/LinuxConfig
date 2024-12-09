@@ -14,4 +14,7 @@ map("n", "<c-k>", "<cmd>TmuxNavigateUp<cr>")
 map("n", "<c-l>", "<cmd>TmuxNavigateRight<cr>")
 map("n", "<c-\\>", "<cmd>TmuxNavigatePrevious<cr>")
 
+-- Replacement of MasonInstallAll (https://github.com/williamboman/mason.nvim/discussions/1795)
+-- map("n", "<A-i>", require("nvchad.mason").install_all())
+
 -- map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
